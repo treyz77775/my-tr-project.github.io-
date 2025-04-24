@@ -1,0 +1,386 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    text-decoration: none;
+
+
+}
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+    
+    background: #000000;
+    color: white;
+}
+
+.counter {
+    font-weight: bold;
+    font-size: 24px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+header {
+    top: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: "Futura Now Text";
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 85%; /* 28.05px */
+ 
+}
+
+
+
+
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.press-icon {
+    width: 272px;
+    height: auto;
+
+    margin-left: 25px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.press-icons {
+    width: 52px;
+    height: auto;
+
+    margin-left: 25px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    background-image: url('svj/backg.svg');
+
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 770px; 
+    margin-right: 45px;
+    margin-top: 55px;
+
+}
+
+
+.hero h1 {
+    font-size: 47px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 63%;
+    flex: 1;
+    margin-left: 60px;
+    font-size: 47px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 85%;
+    font-family: Montserrat;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 465px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    margin-right: 30px;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 60px;
+    font-family: Montserrat;
+    
+}
+
+.success-section {
+    text-align: left;
+    color: white;
+    margin: 50px 0;
+    padding-left: 60px;
+    font-family: Montserrat;
+}
+
+
+.success-section h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.success-section p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+    visibility: hidden;;
+  }
+  .container.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+}
+  .social {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 85%; /* 32.3px */
+    margin-bottom: 65px;
+  }
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    padding: 30px 20px;
+    width: 392px;
+    height: 443px;
+
+    text-align: center;
+    border-radius: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: #161616;
+  }
+  .icon {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #A066CC;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 60px #A066CC ;
+
+    margin-bottom: 61px;
+  }
+  .icon img {
+    width: 50%;
+    height: 50%;
+  }
+  .card-title {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 17px;
+  }
+  .card-text {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 60px;
+  }
+  .btn {
+  
+    width: 214px;
+    height: 41px;
+
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: #202020;
+    color: white;
+    cursor: pointer;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+      padding: 0 20px;
+    }
+  
+    .header-inner {
+      font-size: 24px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero {
+      flex-direction: column;
+      height: auto;
+      background-size: cover;
+      background-position: center;
+      background-image: none;
+      margin-right: 0;
+      margin-top: 0;
+      padding: 150px 0;
+    }
+  
+    .hero h1{
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+      text-align: center;
+    }
+   
+        
+    .hero h1 {
+      font-size: 32px;
+    }
+  
+    .hero p {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        font-size: 14px;
+        text-align: center;
+      }
+  
+    .press-icon {
+    width: 350px;
+    height: 133px;
+    justify-content: center;
+    text-align: center;
+    }
+  
+    .success-section {
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+    }
+  
+    .success-section h2 {
+      font-size: 28px;
+    }
+  
+    .success-section p {
+      font-size: 18px;
+    }
+  
+    .social {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+    }
+  
+    .icon {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 40px;
+    }
+  
+    .card-title {
+      font-size: 20px;
+    }
+  
+    .card-text {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  
+    .btn {
+      width: 180px;
+      height: 38px;
+      font-size: 12px;
+    }
+  }
+  
+
+
+
+
